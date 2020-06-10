@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Uptick.Platform.PubSub.Sdk.ComponentTests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "EnvironmentName": "Development"
+      }
+    }
+  }
+}

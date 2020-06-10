@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Management\Uptick.Platform.PubSub.Sdk.Management.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.RabbitMQ\Uptick.Platform.PubSub.Sdk.RabbitMQ.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk\Uptick.Platform.PubSub.Sdk.csproj" />
+  </ItemGroup>
+
+</Project>

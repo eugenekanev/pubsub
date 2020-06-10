@@ -1,0 +1,14 @@
+﻿{
+  "rabbitmq": {
+    "connectionstring": "host=rabbitmqserver:5672;username=test;password=test",
+    "exchangename": "eugenegreat",
+    "waitexchangename": "waiteugenegreat",
+    "retryfactor": "1000" //it's strongly not recommended to change this parameter
+  },
+  "rabbitmqmanagement": { //hostUrl, username and password parameters should be same as in rabbitmq section
+    "hostUrl": "http://rabbitmqserver",
+    "username": "test",
+    "password": "test",
+    "portNumber": 15672
+  }
+}

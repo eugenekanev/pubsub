@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+
+  uptick.platform.pubsub.sdk.componenttests:
+    entrypoint: ["./wait-for-it.sh", "rabbitmqserver:5672", "--", "dotnet", "vstest", "/Logger:teamcity", "/TestAdapterPath:.", "Uptick.Platform.PubSub.Sdk.ComponentTests.dll"]
+    build:
+      context: ./Uptick.Platform.PubSub.Sdk.ComponentTests
+      dockerfile: Dockerfile
+    environment:
+      EnvironmentName: PubSubComponentTests
+      rabbitmq__connectionstring: "host=rabbitmqserver:5672;username=test;password=test"
+      rabbitmqmanagement__portNumber: 15672
+    depends_on:
+      - rabbitmqserver
+
+        

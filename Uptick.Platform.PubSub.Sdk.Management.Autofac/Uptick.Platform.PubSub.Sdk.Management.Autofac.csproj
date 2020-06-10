@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Management.RabbitMQ\Uptick.Platform.PubSub.Sdk.Management.RabbitMQ.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Management\Uptick.Platform.PubSub.Sdk.Management.csproj" />
+  </ItemGroup>
+
+</Project>

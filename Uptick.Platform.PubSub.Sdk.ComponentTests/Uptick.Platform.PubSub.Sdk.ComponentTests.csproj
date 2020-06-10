@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyNetQ.Management.Client" Version="1.0.0" />
+    <PackageReference Include="FluentAssertions" Version="4.19.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="Serilog.Sinks.XUnit" Version="1.0.6" />
+    <PackageReference Include="TeamCity.VSTest.TestAdapter" Version="1.0.3" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Autofac\Uptick.Platform.PubSub.Sdk.Autofac.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Extensions.Autofac\Uptick.Platform.PubSub.Sdk.Extensions.Autofac.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Extenstions\Uptick.Platform.PubSub.Sdk.Extenstions.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Management.Autofac\Uptick.Platform.PubSub.Sdk.Management.Autofac.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk.Management\Uptick.Platform.PubSub.Sdk.Management.csproj" />
+    <ProjectReference Include="..\Uptick.Platform.PubSub.Sdk\Uptick.Platform.PubSub.Sdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+    <None Update="settings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
